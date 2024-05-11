@@ -1,0 +1,187 @@
+[2024-05-11 18:52:47,069: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-11 18:52:47,084: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 18:52:47,091: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 18:52:47,091: INFO: common: created directory at: artifacts]
+[2024-05-11 18:52:47,091: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-11 18:52:53,006: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 15541420
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "171e877717663dd2e7c421f7e4982a1be84fdd2059f62c7a99398cb99d74794c"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: DCF8:1AEE22:11125C:1686BD:663F7123
+Accept-Ranges: bytes
+Date: Sat, 11 May 2024 13:22:48 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10241-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1715433768.738688,VS0,VE1106
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 97277c8136a3af78a51505567790b6b71e918703
+Expires: Sat, 11 May 2024 13:27:48 GMT
+Source-Age: 1
+
+]
+[2024-05-11 18:52:53,499: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-11 18:52:53,499: INFO: main: >>>>>> stage Data Preprocessing stage started <<<<<<]
+[2024-05-11 18:52:53,499: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 18:52:53,499: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 18:52:53,499: INFO: common: created directory at: artifacts]
+[2024-05-11 18:52:53,499: INFO: common: created directory at: artifacts/data_preprocessing]
+[2024-05-11 18:56:17,324: INFO: data_preprocessing: Preprocessed data saved to: artifacts/data_preprocessing\preprocessed_data.csv]
+[2024-05-11 18:56:17,448: INFO: main: >>>>>> stage Data Preprocessing stage completed <<<<<<
+
+x==========x]
+[2024-05-11 18:56:17,448: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-11 18:56:17,448: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-11 19:00:09,957: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-11 19:00:09,957: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:00:09,957: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:00:09,957: INFO: common: created directory at: artifacts]
+[2024-05-11 19:00:09,969: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-11 19:00:09,970: INFO: data_ingestion: File already exists of size: ~ 15177 KB]
+[2024-05-11 19:00:10,373: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-11 19:00:10,373: INFO: main: >>>>>> stage Data Preprocessing stage started <<<<<<]
+[2024-05-11 19:00:10,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:00:10,390: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:00:10,391: INFO: common: created directory at: artifacts]
+[2024-05-11 19:00:10,392: INFO: common: created directory at: artifacts/data_preprocessing]
+[2024-05-11 19:03:23,694: INFO: data_preprocessing: Preprocessed data saved to: artifacts/data_preprocessing\preprocessed_data.csv]
+[2024-05-11 19:03:23,809: INFO: main: >>>>>> stage Data Preprocessing stage completed <<<<<<
+
+x==========x]
+[2024-05-11 19:03:23,809: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-11 19:03:23,809: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:03:23,809: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:03:23,809: INFO: common: created directory at: artifacts]
+[2024-05-11 19:03:23,809: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-11 19:09:18,480: INFO: data_transformation: Splited data into training and test sets]
+[2024-05-11 19:09:18,480: INFO: data_transformation: (86706, 4284)]
+[2024-05-11 19:09:18,495: INFO: data_transformation: (28903, 4284)]
+[2024-05-11 19:09:18,659: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-11 19:34:39,959: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:34:39,987: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:34:39,989: INFO: common: created directory at: artifacts]
+[2024-05-11 19:34:39,991: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-11 19:34:39,993: ERROR: 1990927345: Error occurred during Model Trainer stage execution: ModelTrainerConfig.__init__() got an unexpected keyword argument 'target_column']
+Traceback (most recent call last):
+  File "C:\Users\Rithvik\AppData\Local\Temp\ipykernel_8488\1990927345.py", line 5, in <module>
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rithvik\AppData\Local\Temp\ipykernel_8488\124112882.py", line 25, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+                           ^^^^^^^^^^^^^^^^^^^
+TypeError: ModelTrainerConfig.__init__() got an unexpected keyword argument 'target_column'
+[2024-05-11 19:39:43,647: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:39:43,658: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:39:43,660: INFO: common: created directory at: artifacts]
+[2024-05-11 19:39:43,661: INFO: 2817813248: target_column:]
+[2024-05-11 19:39:43,664: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-11 19:39:43,665: ERROR: 1990927345: Error occurred during Model Trainer stage execution: ModelTrainerConfig.__init__() got an unexpected keyword argument 'target_column']
+Traceback (most recent call last):
+  File "C:\Users\Rithvik\AppData\Local\Temp\ipykernel_8488\1990927345.py", line 5, in <module>
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rithvik\AppData\Local\Temp\ipykernel_8488\2817813248.py", line 27, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+                           ^^^^^^^^^^^^^^^^^^^
+TypeError: ModelTrainerConfig.__init__() got an unexpected keyword argument 'target_column'
+[2024-05-11 19:41:07,839: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:41:07,848: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:41:07,852: INFO: common: created directory at: artifacts]
+[2024-05-11 19:41:07,854: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-11 19:43:50,861: ERROR: 1990927345: Error occurred during Model Trainer stage execution: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, The experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:review_comment_message: object]
+Traceback (most recent call last):
+  File "C:\Users\Rithvik\AppData\Local\Temp\ipykernel_8488\1990927345.py", line 7, in <module>
+    model_training.train()
+  File "C:\Users\Rithvik\AppData\Local\Temp\ipykernel_8488\1025183640.py", line 25, in train
+    xg_reg.fit(train_x, train_y)
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 730, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\sklearn.py", line 1055, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\sklearn.py", line 521, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+                    ^^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\sklearn.py", line 958, in _create_dmatrix
+    return QuantileDMatrix(
+           ^^^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 730, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 1529, in __init__
+    self._init(
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 1588, in _init
+    it.reraise()
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 576, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+    ^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 557, in _handle_exception
+    return fn()
+           ^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 641, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+                                          ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\data.py", line 1280, in next
+    input_data(**self.kwargs)
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 730, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\core.py", line 624, in input_data
+    new, cat_codes, feature_names, feature_types = _proxy_transform(
+                                                   ^^^^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\data.py", line 1315, in _proxy_transform
+    arr, feature_names, feature_types = _transform_pandas_df(
+                                        ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\data.py", line 490, in _transform_pandas_df
+    _invalid_dataframe_dtype(data)
+  File "d:\recommandation\rithvik\Lib\site-packages\xgboost\data.py", line 308, in _invalid_dataframe_dtype
+    raise ValueError(msg)
+ValueError: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, The experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:review_comment_message: object
+[2024-05-11 19:52:18,912: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-11 19:52:18,912: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:52:18,912: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:52:18,928: INFO: common: created directory at: artifacts]
+[2024-05-11 19:52:18,929: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-11 19:52:18,930: INFO: data_ingestion: File already exists of size: ~ 15177 KB]
+[2024-05-11 19:52:19,351: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-11 19:52:19,351: INFO: main: >>>>>> stage Data Preprocessing stage started <<<<<<]
+[2024-05-11 19:52:19,351: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:52:19,351: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:52:19,351: INFO: common: created directory at: artifacts]
+[2024-05-11 19:52:19,363: INFO: common: created directory at: artifacts/data_preprocessing]
+[2024-05-11 19:55:34,285: INFO: data_preprocessing: Preprocessed data saved to: artifacts/data_preprocessing\preprocessed_data.csv]
+[2024-05-11 19:55:34,384: INFO: main: >>>>>> stage Data Preprocessing stage completed <<<<<<
+
+x==========x]
+[2024-05-11 19:55:34,385: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-11 19:55:34,388: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-11 19:55:34,397: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-11 19:55:34,398: INFO: common: created directory at: artifacts]
+[2024-05-11 19:55:34,399: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-11 20:01:36,405: INFO: data_transformation: Splited data into training and test sets]
+[2024-05-11 20:01:36,405: INFO: data_transformation: (86706, 4283)]
+[2024-05-11 20:01:36,405: INFO: data_transformation: (28903, 4283)]
+[2024-05-11 20:01:36,546: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
