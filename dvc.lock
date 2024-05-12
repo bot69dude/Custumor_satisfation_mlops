@@ -1,0 +1,140 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/mlProject/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 00b499018103c4e506cf961c0bc51ac3
+      size: 974
+    - path: src/mlProject/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 194f3ec82757d5bb77b5d6191c455ad5
+      size: 912
+    outs:
+    - path: artifacts/data_ingestion/olist_customers_dataset.csv
+      hash: md5
+      md5: 4a40c7d839d0b43882961dcf6ab29d91
+      size: 51905700
+  data_preprocessing:
+    cmd: python src/mlProject/pipeline/stage_02_data_preprocessing.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 00b499018103c4e506cf961c0bc51ac3
+      size: 974
+    - path: params.yaml
+      hash: md5
+      md5: ae5c830c70ed88f02bfa8fe9973efddd
+      size: 873
+    - path: src/mlProject/pipeline/stage_02_data_preprocessing.py
+      hash: md5
+      md5: 839a2603209aac658ba1d0796e106b0d
+      size: 897
+    params:
+      params.yaml:
+        categorical_features:
+        - order_status
+        - product_category_name
+        - product_category_name_english
+        - customer_city
+        - customer_state
+        - payment_type
+        features_to_drop:
+        - order_purchase_timestamp
+        - order_approved_at
+        - order_delivered_carrier_date
+        - order_delivered_customer_date
+        - order_estimated_delivery_date
+        - customer_zip_code_prefix
+        - shipping_limit_date
+        - product_weight_g
+        - product_length_cm
+        - product_height_cm
+        - product_width_cm
+        - order_id
+        - customer_id
+        - payment_sequential
+        - customer_unique_id
+        - order_item_id
+        - product_id
+        - seller_id
+        - review_comment_message
+    outs:
+    - path: artifacts/data_preprocessing/preprocessed_data.csv
+      hash: md5
+      md5: 4d8242665614a5693be183399643d168
+      size: 2970504230
+  data_transformation:
+    cmd: python src/mlProject/pipeline/stage_03_data_transformation.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 00b499018103c4e506cf961c0bc51ac3
+      size: 974
+    - path: src/mlProject/pipeline/stage_03_data_transformation.py
+      hash: md5
+      md5: 19fbcced20d3f3c1602e9015f3feba3f
+      size: 1048
+    outs:
+    - path: artifacts/data_transformation/test.csv
+      hash: md5
+      md5: 258ebe4eb14cb455371cf4d7e050e458
+      size: 742718670
+    - path: artifacts/data_transformation/train.csv
+      hash: md5
+      md5: beb4b57bc48f52914ef6aa6a143a1983
+      size: 2227851158
+  model_trainer:
+    cmd: python src/mlProject/pipeline/stage_04_model_training.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 00b499018103c4e506cf961c0bc51ac3
+      size: 974
+    - path: params.yaml
+      hash: md5
+      md5: ae5c830c70ed88f02bfa8fe9973efddd
+      size: 873
+    - path: src/mlProject/pipeline/stage_04_model_training.py
+      hash: md5
+      md5: 496235a616ade50b235e321efdc69bdc
+      size: 1119
+    params:
+      params.yaml:
+        TARGET_COLUMN:
+          name: review_score
+        XGBRegressor:
+          objective: reg:squarederror
+          n_estimators: 100
+          learning_rate: 0.1
+          max_depth: 5
+          min_child_weight: 1
+          subsample: 0.8
+          colsample_bytree: 0.8
+          reg_lambda: 1
+    outs:
+    - path: artifacts/model_trainer/model.joblib
+      hash: md5
+      md5: 13fb35fe965996b18895f6d1b1cd6bf2
+      size: 426167
+  model_evaluation:
+    cmd: python src/mlProject/pipeline/stage_05_model_evaluation.py
+    deps:
+    - path: artifacts/model_trainer/model.joblib
+      hash: md5
+      md5: 13fb35fe965996b18895f6d1b1cd6bf2
+      size: 426167
+    - path: config/config.yaml
+      hash: md5
+      md5: 00b499018103c4e506cf961c0bc51ac3
+      size: 974
+    - path: src/mlProject/pipeline/stage_05_model_evaluation.py
+      hash: md5
+      md5: 35a0d73c4f33627ec1493f371ea62c77
+      size: 901
+    outs:
+    - path: artifacts/model_evaluation/metrics.json
+      hash: md5
+      md5: acab916d2917e65a3a95f2940465d9b1
+      size: 143
