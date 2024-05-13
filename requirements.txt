@@ -11,3 +11,4 @@ ensure==1.0.4
 joblib
 Flask
 xgboost==2.0.3
+-e .

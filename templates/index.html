@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        select,
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Details Form</h2>
+        <form action="/predict" method="post">
+            <label for="order_status">Order Status:</label>
+            <select id="order_status" name="order_status">
+                <option value="delivered">Delivered</option>
+                <option value="shipped">Shipped</option>
+                <option value="invoiced">Invoiced</option>
+                <option value="canceled">Canceled</option>
+                <option value="processing">Processing</option>
+                <option value="approved">Approved</option>
+                <option value="unavailable">Unavailable</option>
+            </select><br><br>
+
+            <label for="payment_type">Payment Type:</label>
+            <select id="payment_type" name="payment_type">
+                <option value="credit_card">Credit Card</option>
+                <option value="voucher">Voucher</option>
+                <option value="boleto">Boleto</option>
+                <option value="debit_card">Debit Card</option>
+            </select><br><br>
+
+            <label for="payment_installments">Payment Installments:</label>
+            <input type="number" id="payment_installments" name="payment_installments"><br><br>
+
+            <label for="payment_value">Payment Value:</label>
+            <input type="number" step="0.01" id="payment_value" name="payment_value"><br><br>
+
+            <label for="customer_city">Customer City:</label>
+            <select id="customer_city" name="customer_city">
+                {% for city in customer_cities %}
+                <option value="{{ city }}">{{ city }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="customer_state">Customer State:</label>
+            <select id="customer_state" name="customer_state">
+                {% for state in customer_states %}
+                <option value="{{ state }}">{{ state }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="price">Price:</label>
+            <input type="number" step="0.01" id="price" name="price"><br><br>
+
+            <label for="freight_value">Freight Value:</label>
+            <input type="number" step="0.01" id="freight_value" name="freight_value"><br><br>
+
+            <label for="product_description_length">Product Description Length:</label>
+            <input type="number" id="product_description_length" name="product_description_length"><br><br>
+
+            <label for="product_photos_qty">Product Photos Quantity:</label>
+            <input type="number" id="product_photos_qty" name="product_photos_qty"><br><br>
+
+            <label for="product_category">Product Category:</label>
+            <select id="product_category" name="product_category">
+                {% for category in product_categories %}
+                <option value="{{ category }}">{{ category }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <label for="Order_purchase_hour">Order Purchase Hour:</label>
+            <input type="number" id="Order_purchase_hour" name="Order_purchase_hour"><br><br>
+
+            <label for="Order_purchase_dayofweek">Order Purchase Day of Week:</label>
+            <input type="number" id="Order_purchase_dayofweek" name="Order_purchase_dayofweek"><br><br>
+
+            <label for="Time_taken_for_delivery">Time Taken for Delivery:</label>
+            <input type="number" id="Time_taken_for_delivery" name="Time_taken_for_delivery"><br><br>
+
+            <label for="delivery_delay">Delivery Delay:</label>
+            <input type="number" id="delivery_delay" name="delivery_delay"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

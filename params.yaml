@@ -12,12 +12,10 @@ features_to_drop : [
     'order_purchase_timestamp','order_approved_at','order_delivered_carrier_date','order_delivered_customer_date','order_estimated_delivery_date',
     'customer_zip_code_prefix','shipping_limit_date','product_weight_g','product_length_cm','product_height_cm','product_width_cm',
     'order_id', 'customer_id', 'payment_sequential','customer_unique_id', 'order_item_id', 'product_id',
-    'seller_id','review_comment_message'
-  ]
+    'seller_id','review_comment_message','product_category_name','product_name_lenght']
 
 categorical_features : [
     'order_status',
-    'product_category_name',
     'product_category_name_english',
     'customer_city',
     'customer_state',
