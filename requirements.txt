@@ -8,7 +8,9 @@ python-box==7.1.1
 pyYAML
 tqdm
 ensure==1.0.4
+setuptools==69.5.1
 joblib
 Flask
 xgboost==2.0.3
+pytest==8.2.0
 -e .
