@@ -7,10 +7,9 @@ This project aims to predict the customer satisfaction score for the next order 
 For a given customer's historical data, we are tasked with predicting the review score for the next order or purchase. The dataset comprises information on 100,000 orders spanning from 2016 to 2018, gathered from various marketplaces in Brazil. It encompasses diverse dimensions, including order status, price, payment, freight performance, customer location, product attributes, and customer reviews.
 
 ## Dataset
-The Brazilian E-Commerce Public Dataset by Olist serves as the foundation for our analysis and model development. This comprehensive dataset offers insights into the intricacies of e-commerce operations, enabling us to extract valuable patterns and trends to inform our predictive model.
+The Brazilian E-Commerce Public Dataset by Olist serves as the foundation for our analysis and model development. This comprehensive dataset offers insights into the intricacies of e-commerce operations, enabling us to extract valuable patterns and trends to inform our predictive model.Download the Olist dataset from [here](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-## Approach
-We will employ ZenML, a powerful framework for MLOps, to construct a production-ready pipeline for predicting customer satisfaction scores. This approach ensures scalability, reproducibility, and maintainability of our machine learning solution in real-world scenarios.
+
 
 ## Getting Started
 To replicate our findings and contribute to the project, follow these steps:
