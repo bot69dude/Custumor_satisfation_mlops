@@ -33,12 +33,12 @@ pip install -r requirements.txt
 
 # Run the following commands:
 ```bash
-        dvc repro
-        python app.py
+    dvc repro
+    python app.py
 ```
 # Application Testing:
 ```bash
-        pytest
+    pytest
 ```
 ## Experimentation Tracking
 Experimentation tracking for this project is available on [Dagshub](https://dagshub.com/bot69dude/Custumor_satisfation_mlops.mlflow). You can view detailed experiment logs, metrics, and visualizations to understand the model's performance.
