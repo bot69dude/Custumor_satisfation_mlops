@@ -40,24 +40,7 @@ pytest
 ```
 ## Experimentation Tracking
 Experimentation tracking for this project is available on [Dagshub](https://dagshub.com/bot69dude/Custumor_satisfation_mlops.mlflow). You can view detailed experiment logs, metrics, and visualizations to understand the model's performance.
-=======
-
-# Run the following commands:
-```bash
-dvc repro
-python app.py
-```
-# Application Testing:
-```bash
-pytest
-```
-## Experimentation Tracking
-Experimentation tracking for this project is available on [Dagshub](https://dagshub.com/bot69dude/Custumor_satisfation_mlops.mlflow). You can view detailed experiment logs, metrics, and visualizations to understand the model's performance.
 
 
 ## Acknowledgements
 We would like to express our gratitude to Olist for providing the invaluable dataset for this project.
-
-## License
-This project is licensed under the [MIT License](link-to-license).
->>>>>>> b0dc31b1de01854616187d368de426a410445914
