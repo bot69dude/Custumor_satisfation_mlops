@@ -13,7 +13,7 @@ The Brazilian E-Commerce Public [Dataset Olist](https://www.kaggle.com/datasets/
 - **ML Framework**: XGBoost
 - **Web Framework**: Flask
 - **Experimentation Tracking**: MLflow, DVC (Data Version Control)
-
+- **Testing Framework**: pytest
 ## Python Requirements
 Let's jump into the Python packages you need. Within the Python environment of your choice, run:
 
