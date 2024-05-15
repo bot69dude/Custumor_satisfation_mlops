@@ -28,7 +28,6 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/bot69dude/Retail_price_optimizati
 export MLFLOW_TRACKING_USERNAME=bot69dude
 export MLFLOW_TRACKING_PASSWORD=559b04e28f7af9242d3e209229040403de58f073
 ```
-<<<<<<< HEAD
 
 # Run the following commands:
 ```bash
